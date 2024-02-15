@@ -3,6 +3,8 @@ package automationteststore;
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
+import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -24,9 +26,10 @@ public class TestCases extends Parameters {
 	public void Setup() {
 		driver.get("https://automationteststore.com/");
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, enabled = true)
 	public void SignUp() throws InterruptedException {
 		WebElement signUpBtn = driver.findElement(By.id("customer_menu_top")).findElement(By.tagName("li"));
 		signUpBtn.click();
@@ -103,7 +106,9 @@ public class TestCases extends Parameters {
 			cityInput.sendKeys(city);
 			ZIPCodeInput.sendKeys(ZIPCode);
 			countryInput.sendKeys(country);
+			
 			Thread.sleep(2000);
+			
 			Select regionSelector = new Select(regionInput);
 			Random rndRegion = new Random();
 			int regionSize = regionSelector.getOptions().size();
@@ -121,8 +126,6 @@ public class TestCases extends Parameters {
 			checkAgreement.click();
 			continueSignUpBtn.click();
 
-			Thread.sleep(2000);
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
@@ -131,14 +134,14 @@ public class TestCases extends Parameters {
 	}
 
 	@Test(priority = 2, enabled = true)
-	public void Logout() {
+	public void Logout() throws InterruptedException {
 		String logOutURL = "https://automationteststore.com/index.php?rt=account/logout";
 		driver.get(logOutURL);
 		assertEquals(driver.getCurrentUrl(), logOutURL);
 	}
 
 	@Test(priority = 3, enabled = true)
-	public void Login() {
+	public void Login() throws InterruptedException {
 		driver.get("https://automationteststore.com/index.php?rt=account/login");
 
 		WebElement nameInput = driver.findElement(By.id("loginFrm_loginname"));
@@ -153,8 +156,8 @@ public class TestCases extends Parameters {
 		assertEquals(driver.getCurrentUrl(), urlSignedIn);
 	}
 
-	@Test(priority = 4, enabled = false)
-	public void AddSkipConditioner() throws InterruptedException {
+	@Test(priority = 4, enabled = true)
+	public void AddOneSkipOneConditioner() throws InterruptedException {
 		driver.get("https://automationteststore.com/index.php?rt=product/category&path=52_54");
 		List<WebElement> conditionerList = driver.findElement(By.cssSelector(".thumbnails.grid.row.list-inline"))
 				.findElements(By.cssSelector(".col-md-3.col-sm-6.col-xs-12"));
@@ -174,9 +177,40 @@ public class TestCases extends Parameters {
 		assertEquals(itemsNumCart, (conditionerList.size() + 1) / 2);
 	}
 
+	@Test(priority = 5, enabled = true)
+	public void SumAllPrices () throws InterruptedException {
+		driver.get("https://automationteststore.com/index.php?rt=product/category&path=52_54");
+		
+		WebElement conditionerContainer = driver.findElement(By.cssSelector(".thumbnails.grid.row.list-inline"));
+		List<WebElement> conditionerList = new ArrayList<WebElement>();
+
+		List<WebElement> onePriceElements = conditionerContainer.findElements(By.className("oneprice"));
+		List<WebElement> newPriceElements = conditionerContainer.findElements(By.className("pricenew"));
+
+		conditionerList.addAll(onePriceElements);
+		conditionerList.addAll(newPriceElements);
+		
+		
+		double sumPrice = 0;
+		for (int i = 0; i < conditionerList.size(); i++) {
+			double price = Double.parseDouble(conditionerList.get(i).getText().replace("$", ""));
+			sumPrice += price;
+		}
+		double expectedPrice = 95.68;
+		assertEquals(sumPrice, expectedPrice );
+	}
+	
+	@Test(priority = 6, enabled = true)
+	public void Checkout () throws InterruptedException {
+		driver.findElement(By.tagName("header")).findElement(By.className("menu_checkout")).click();
+		driver.findElement(By.id("checkout_btn")).click();
+		String successfullCheckoutURL = "https://automationteststore.com/index.php?rt=checkout/success";
+		Thread.sleep(2000);
+		assertEquals(driver.getCurrentUrl(), successfullCheckoutURL);
+	}
 	@AfterTest
 	public void Post() throws InterruptedException {
-//		Thread.sleep(20000);
-//		driver.close();
+		Thread.sleep(20000);
+		driver.close();
 	}
 }

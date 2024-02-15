@@ -7,7 +7,7 @@
         <methods>
           <include name="Setup"/>
           <include name="Post"/>
-          <include name="SignUp"/>
+          <include name="Checkout"/>
         </methods>
       </class> <!-- automationteststore.TestCases -->
     </classes>
