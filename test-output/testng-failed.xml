@@ -5,9 +5,9 @@
     <classes>
       <class name="automationteststore.TestCases">
         <methods>
+          <include name="SumPriceOfSectionsHomePage"/>
           <include name="Setup"/>
           <include name="Post"/>
-          <include name="Checkout"/>
         </methods>
       </class> <!-- automationteststore.TestCases -->
     </classes>

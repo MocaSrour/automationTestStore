@@ -1,41 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-15T19:01:01 EET" name="Default suite" finished-at="2024-02-15T19:01:52 EET" duration-ms="50721">
+  <suite started-at="2024-02-19T18:25:07 EET" name="Default suite" finished-at="2024-02-19T18:25:11 EET" duration-ms="4110">
     <groups>
     </groups>
-    <test started-at="2024-02-15T19:01:01 EET" name="Default test" finished-at="2024-02-15T19:01:52 EET" duration-ms="50721">
+    <test started-at="2024-02-19T18:25:07 EET" name="Default test" finished-at="2024-02-19T18:25:11 EET" duration-ms="4110">
       <class name="automationteststore.TestCases">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:automationteststore.TestCases@34a1d21f]" started-at="2024-02-15T19:01:01 EET" name="Setup" finished-at="2024-02-15T19:01:06 EET" duration-ms="4411" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:automationteststore.TestCases@39dcf4b0]" started-at="2024-02-19T18:25:07 EET" name="Setup" finished-at="2024-02-19T18:25:11 EET" duration-ms="3651" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="SignUp()[pri:1, instance:automationteststore.TestCases@34a1d21f]" started-at="2024-02-15T19:01:06 EET" name="SignUp" finished-at="2024-02-15T19:01:16 EET" duration-ms="10514" status="PASS">
+        <test-method signature="SumPriceOfSectionsHomePage()[pri:9, instance:automationteststore.TestCases@39dcf4b0]" started-at="2024-02-19T18:25:11 EET" name="SumPriceOfSectionsHomePage" finished-at="2024-02-19T18:25:11 EET" duration-ms="385" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SignUp -->
-        <test-method signature="Logout()[pri:2, instance:automationteststore.TestCases@34a1d21f]" started-at="2024-02-15T19:01:16 EET" name="Logout" finished-at="2024-02-15T19:01:18 EET" duration-ms="1792" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Logout -->
-        <test-method signature="Login()[pri:3, instance:automationteststore.TestCases@34a1d21f]" started-at="2024-02-15T19:01:18 EET" name="Login" finished-at="2024-02-15T19:01:20 EET" duration-ms="1480" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method signature="AddSkipConditioner()[pri:4, instance:automationteststore.TestCases@34a1d21f]" started-at="2024-02-15T19:01:20 EET" name="AddSkipConditioner" finished-at="2024-02-15T19:01:26 EET" duration-ms="6123" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddSkipConditioner -->
-        <test-method signature="SumAllPrices()[pri:5, instance:automationteststore.TestCases@34a1d21f]" started-at="2024-02-15T19:01:26 EET" name="SumAllPrices" finished-at="2024-02-15T19:01:27 EET" duration-ms="1222" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SumAllPrices -->
-        <test-method signature="Checkout()[pri:6, instance:automationteststore.TestCases@34a1d21f]" started-at="2024-02-15T19:01:27 EET" name="Checkout" finished-at="2024-02-15T19:01:32 EET" duration-ms="5045" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Checkout -->
-        <test-method is-config="true" signature="Post()[pri:0, instance:automationteststore.TestCases@34a1d21f]" started-at="2024-02-15T19:01:32 EET" name="Post" finished-at="2024-02-15T19:01:52 EET" duration-ms="20073" status="PASS">
+        </test-method> <!-- SumPriceOfSectionsHomePage -->
+        <test-method is-config="true" signature="Post()[pri:0, instance:automationteststore.TestCases@39dcf4b0]" started-at="2024-02-19T18:25:11 EET" name="Post" finished-at="2024-02-19T18:25:11 EET" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Post -->

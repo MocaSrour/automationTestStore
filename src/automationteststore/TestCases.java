@@ -5,8 +5,10 @@ import static org.testng.Assert.assertEquals;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -29,7 +31,7 @@ public class TestCases extends Parameters {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 	}
 
-	@Test(priority = 1, enabled = true)
+	@Test(priority = 1, enabled = false)
 	public void SignUp() throws InterruptedException {
 		WebElement signUpBtn = driver.findElement(By.id("customer_menu_top")).findElement(By.tagName("li"));
 		signUpBtn.click();
@@ -106,9 +108,9 @@ public class TestCases extends Parameters {
 			cityInput.sendKeys(city);
 			ZIPCodeInput.sendKeys(ZIPCode);
 			countryInput.sendKeys(country);
-			
+
 			Thread.sleep(2000);
-			
+
 			Select regionSelector = new Select(regionInput);
 			Random rndRegion = new Random();
 			int regionSize = regionSelector.getOptions().size();
@@ -133,14 +135,14 @@ public class TestCases extends Parameters {
 		}
 	}
 
-	@Test(priority = 2, enabled = true)
+	@Test(priority = 2, enabled = false)
 	public void Logout() throws InterruptedException {
 		String logOutURL = "https://automationteststore.com/index.php?rt=account/logout";
 		driver.get(logOutURL);
 		assertEquals(driver.getCurrentUrl(), logOutURL);
 	}
 
-	@Test(priority = 3, enabled = true)
+	@Test(priority = 3, enabled = false)
 	public void Login() throws InterruptedException {
 		driver.get("https://automationteststore.com/index.php?rt=account/login");
 
@@ -156,7 +158,7 @@ public class TestCases extends Parameters {
 		assertEquals(driver.getCurrentUrl(), urlSignedIn);
 	}
 
-	@Test(priority = 4, enabled = true)
+	@Test(priority = 4, enabled = false)
 	public void AddOneSkipOneConditioner() throws InterruptedException {
 		driver.get("https://automationteststore.com/index.php?rt=product/category&path=52_54");
 		List<WebElement> conditionerList = driver.findElement(By.cssSelector(".thumbnails.grid.row.list-inline"))
@@ -177,10 +179,10 @@ public class TestCases extends Parameters {
 		assertEquals(itemsNumCart, (conditionerList.size() + 1) / 2);
 	}
 
-	@Test(priority = 5, enabled = true)
-	public void SumAllPrices () throws InterruptedException {
+	@Test(priority = 5, enabled = false)
+	public void SumAllPrices() throws InterruptedException {
 		driver.get("https://automationteststore.com/index.php?rt=product/category&path=52_54");
-		
+
 		WebElement conditionerContainer = driver.findElement(By.cssSelector(".thumbnails.grid.row.list-inline"));
 		List<WebElement> conditionerList = new ArrayList<WebElement>();
 
@@ -189,25 +191,85 @@ public class TestCases extends Parameters {
 
 		conditionerList.addAll(onePriceElements);
 		conditionerList.addAll(newPriceElements);
-		
-		
+
 		double sumPrice = 0;
 		for (int i = 0; i < conditionerList.size(); i++) {
 			double price = Double.parseDouble(conditionerList.get(i).getText().replace("$", ""));
 			sumPrice += price;
 		}
 		double expectedPrice = 95.68;
-		assertEquals(sumPrice, expectedPrice );
+		assertEquals(sumPrice, expectedPrice);
 	}
-	
-	@Test(priority = 6, enabled = true)
-	public void Checkout () throws InterruptedException {
+
+	@Test(priority = 6, enabled = false)
+	public void Checkout() throws InterruptedException {
 		driver.findElement(By.tagName("header")).findElement(By.className("menu_checkout")).click();
 		driver.findElement(By.id("checkout_btn")).click();
 		String successfullCheckoutURL = "https://automationteststore.com/index.php?rt=checkout/success";
 		Thread.sleep(2000);
 		assertEquals(driver.getCurrentUrl(), successfullCheckoutURL);
 	}
+
+	@Test(priority = 7, enabled = false)
+	public void CheckContactNum() {
+		String expectedNumber = "+123 456 7890";
+		String actualNumber = driver.findElement(By.tagName("footer")).findElement(By.tagName("ul"))
+				.findElement(By.tagName("li")).getText().trim();
+
+		assertEquals(actualNumber, expectedNumber);
+	}
+
+	@Test(priority = 8, enabled = false)
+	public void SiteMapInUpperCase() {
+		WebElement siteMapBtn = driver.findElement(By.tagName("footer")).findElement(By.className("info"))
+				.findElement(By.className("info_links_footer"))
+				.findElement(By.xpath("//a[normalize-space()='Site Map']"));
+		siteMapBtn.click();
+
+		List<WebElement> ulList = driver.findElements(By.xpath("//li[@class='list-group-item']//a"));
+
+		for (int i = 0; i < ulList.size(); i++) {
+
+			if (ulList.get(i).getText().contains("About Us")) {
+				System.out.println(driver.findElement(By.xpath("//li[contains(text(), 'Information')]")).getText());
+				break;
+			}
+			System.out.println(ulList.get(i).getText());
+		}
+	}
+
+	@Test(priority = 9, enabled = false)
+	public void SumPriceOfSectionsHomePage() {
+		List<WebElement> sections = driver.findElements(By.cssSelector(".row.mt20"));
+
+		for (int y = 1; y < sections.size(); y++) {
+
+			List<WebElement> sectionList = sections.get(y).findElements(By.xpath(
+					".//div[@class='pricetag jumbotron' and not(span)]//div[@class='oneprice' or @class='pricenew']"));
+			System.out.println();
+			double sumPrice = 0;
+			for (int i = 0; i < sectionList.size(); i++) {
+
+				double price = Double.parseDouble(sectionList.get(i).getText().replace("$", ""));
+				sumPrice += price;
+
+			}
+			System.out.println( sections.get(y).getAttribute("id") + ": $"+ sumPrice);
+		}
+	}
+
+	@Test(priority = 10, enabled = false)
+	public void PaymentMethodsInFooter() {
+		WebElement imageInFooter = driver.findElement(By.id("footer")).findElement(By.xpath("//img[@alt='payments']"));
+		assertEquals(imageInFooter.isDisplayed(), true);
+	}
+
+	@Test(priority = 11, enabled = false)
+	public void NavigateToLinkedInAndBackToWebsite() {
+		driver.get("https://www.linkedin.com/in/mukarram-srour-7b8953b3/");
+		driver.navigate().back();
+	}
+
 	@AfterTest
 	public void Post() throws InterruptedException {
 		Thread.sleep(20000);
