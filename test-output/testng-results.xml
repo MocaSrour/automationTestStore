@@ -1,25 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-19T18:25:07 EET" name="Default suite" finished-at="2024-02-19T18:25:11 EET" duration-ms="4110">
+  <suite started-at="2024-02-21T19:13:35 EET" name="Testing Google Apps" finished-at="2024-02-21T19:13:48 EET" duration-ms="12826">
     <groups>
     </groups>
-    <test started-at="2024-02-19T18:25:07 EET" name="Default test" finished-at="2024-02-19T18:25:11 EET" duration-ms="4110">
-      <class name="automationteststore.TestCases">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:automationteststore.TestCases@39dcf4b0]" started-at="2024-02-19T18:25:07 EET" name="Setup" finished-at="2024-02-19T18:25:11 EET" duration-ms="3651" status="PASS">
+    <test started-at="2024-02-21T19:13:35 EET" name="Regression" finished-at="2024-02-21T19:13:48 EET" duration-ms="12826">
+      <class name="automationteststore.SignUpStep">
+        <test-method signature="browser_is_open()[pri:1, instance:automationteststore.SignUpStep@6731787b]" started-at="2024-02-21T19:13:35 EET" name="browser_is_open" finished-at="2024-02-21T19:13:37 EET" duration-ms="1636" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="SumPriceOfSectionsHomePage()[pri:9, instance:automationteststore.TestCases@39dcf4b0]" started-at="2024-02-19T18:25:11 EET" name="SumPriceOfSectionsHomePage" finished-at="2024-02-19T18:25:11 EET" duration-ms="385" status="PASS">
+        </test-method> <!-- browser_is_open -->
+        <test-method signature="user_is_on_sign_up_page()[pri:2, instance:automationteststore.SignUpStep@6731787b]" started-at="2024-02-21T19:13:37 EET" name="user_is_on_sign_up_page" finished-at="2024-02-21T19:13:38 EET" duration-ms="945" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SumPriceOfSectionsHomePage -->
-        <test-method is-config="true" signature="Post()[pri:0, instance:automationteststore.TestCases@39dcf4b0]" started-at="2024-02-19T18:25:11 EET" name="Post" finished-at="2024-02-19T18:25:11 EET" duration-ms="0" status="PASS">
+        </test-method> <!-- user_is_on_sign_up_page -->
+        <test-method signature="user_enters_all_feilds()[pri:3, instance:automationteststore.SignUpStep@6731787b]" started-at="2024-02-21T19:13:38 EET" name="user_enters_all_feilds" finished-at="2024-02-21T19:13:43 EET" duration-ms="5636" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Post -->
-      </class> <!-- automationteststore.TestCases -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- user_enters_all_feilds -->
+        <test-method signature="user_clicks_sign_up_button_or_continue()[pri:4, instance:automationteststore.SignUpStep@6731787b]" started-at="2024-02-21T19:13:43 EET" name="user_clicks_sign_up_button_or_continue" finished-at="2024-02-21T19:13:44 EET" duration-ms="774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_clicks_sign_up_button_or_continue -->
+        <test-method signature="user_is_navigated_to_home_page()[pri:5, instance:automationteststore.SignUpStep@6731787b]" started-at="2024-02-21T19:13:44 EET" name="user_is_navigated_to_home_page" finished-at="2024-02-21T19:13:44 EET" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_is_navigated_to_home_page -->
+      </class> <!-- automationteststore.SignUpStep -->
+      <class name="automationteststore.ChangePasswordStep">
+        <test-method signature="navigate_to_change_password_page()[pri:6, instance:automationteststore.ChangePasswordStep@2c104774]" started-at="2024-02-21T19:13:44 EET" name="navigate_to_change_password_page" finished-at="2024-02-21T19:13:44 EET" duration-ms="377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigate_to_change_password_page -->
+        <test-method signature="user_input_current_password_new_password_press_continue()[pri:7, instance:automationteststore.ChangePasswordStep@2c104774]" started-at="2024-02-21T19:13:44 EET" name="user_input_current_password_new_password_press_continue" finished-at="2024-02-21T19:13:48 EET" duration-ms="3185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_input_current_password_new_password_press_continue -->
+        <test-method signature="password_should_be_changed()[pri:8, instance:automationteststore.ChangePasswordStep@2c104774]" started-at="2024-02-21T19:13:48 EET" name="password_should_be_changed" finished-at="2024-02-21T19:13:48 EET" duration-ms="99" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- password_should_be_changed -->
+      </class> <!-- automationteststore.ChangePasswordStep -->
+    </test> <!-- Regression -->
+  </suite> <!-- Testing Google Apps -->
 </testng-results>

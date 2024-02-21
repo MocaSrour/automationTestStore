@@ -2,11 +2,11 @@ package automationteststore;
 
 import static org.testng.Assert.assertEquals;
 
-import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,12 +14,12 @@ import io.cucumber.java.en.When;
 
 public class AddAllMenItemsStep extends Parameters {
 	List<WebElement> itemsList;
-	
+	@Test
 	@Given("men section page is open")
 	public void men_section_page_is_open() {
 		driver.get("https://automationteststore.com/index.php?rt=product/category&path=58");
 	}
-
+	@Test
 	@When("user add all items")
 	public void user_add_all_items() {
 		itemsList = driver.findElement(By.cssSelector(".thumbnails.grid.row.list-inline"))
@@ -35,7 +35,7 @@ public class AddAllMenItemsStep extends Parameters {
 			}
 		}
 	}
-
+	@Test
 	@Then("cart should contain all items")
 	public void cart_should_contain_all_items() {
 		int itemsNumCart = Integer.parseInt(driver.findElement(By.xpath("//ul[@class='nav topcart pull-left']"))

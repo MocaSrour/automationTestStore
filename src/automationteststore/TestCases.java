@@ -5,10 +5,8 @@ import static org.testng.Assert.assertEquals;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
-import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -20,9 +18,6 @@ import org.testng.annotations.Test;
 import com.google.gson.JsonObject;
 
 public class TestCases extends Parameters {
-
-	private String loginName;
-	private String pass;
 
 	@BeforeTest
 	public void Setup() {
@@ -210,7 +205,7 @@ public class TestCases extends Parameters {
 		assertEquals(driver.getCurrentUrl(), successfullCheckoutURL);
 	}
 
-	@Test(priority = 7, enabled = false)
+	@Test(priority = 7, enabled = true)
 	public void CheckContactNum() {
 		String expectedNumber = "+123 456 7890";
 		String actualNumber = driver.findElement(By.tagName("footer")).findElement(By.tagName("ul"))
@@ -264,15 +259,17 @@ public class TestCases extends Parameters {
 		assertEquals(imageInFooter.isDisplayed(), true);
 	}
 
-	@Test(priority = 11, enabled = false)
+	@Test(priority = 11, enabled = true)
 	public void NavigateToLinkedInAndBackToWebsite() {
 		driver.get("https://www.linkedin.com/in/mukarram-srour-7b8953b3/");
 		driver.navigate().back();
+		String expectedURL = "https://automationteststore.com/";
+		assertEquals(driver.getCurrentUrl(), expectedURL);
 	}
 
 	@AfterTest
 	public void Post() throws InterruptedException {
-		Thread.sleep(20000);
-		driver.close();
+	//	Thread.sleep(20000);
+	//	driver.close();
 	}
 }
