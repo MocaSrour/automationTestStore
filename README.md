@@ -1,6 +1,6 @@
 # E-Commerce Website Testing
 
-This repository contains automated tests for the e-commerce website [Jupiter Toys Shop](https://jupiter.cloud.planittesting.com/#/shop).
+This repository contains automated tests for the e-commerce website [Automation Test Store](https://automationteststore.com/).
 
 ## Getting Started
 
@@ -17,13 +17,13 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone the repository from GitHub:
 
 ```bash
-git clone https://github.com/MocaSrour/JupiterToys
+git clone https://github.com/MocaSrour/automationTestStore
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd JupiterToys
+cd automationTestStore
 ```
 
 ## Running the tests
