@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Testing_Google_Apps" class="navigator-link">
-              <span class="suite-name border-passed">Testing Google Apps</span>
+              <span class="suite-name border-failed">Testing Google Apps</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods,   8 passed</span>
+                    <span class="method-stats">8 methods, 4 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Testing_Google_Apps" class="hide-methods failed suite-Testing_Google_Apps"> (hide)</a> <!-- hide-methods failed suite-Testing_Google_Apps -->
+                      <a href="#" panel-name="suite-Testing_Google_Apps" class="show-methods failed suite-Testing_Google_Apps"> (show)</a> <!-- show-methods failed suite-Testing_Google_Apps -->
+                    </span>
+                    <div class="method-list-content failed suite-Testing_Google_Apps">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Testing_Google_Apps" title="automationteststore.ChangePasswordStep" class="method navigator-link" hash-for-method="password_should_be_changed">password_should_be_changed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Testing_Google_Apps" title="automationteststore.SignUpStep" class="method navigator-link" hash-for-method="user_enters_all_feilds">user_enters_all_feilds</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Testing_Google_Apps" title="automationteststore.ChangePasswordStep" class="method navigator-link" hash-for-method="user_input_current_password_new_password_press_continue">user_input_current_password_new_password_press_continue</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Testing_Google_Apps" title="automationteststore.SignUpStep" class="method navigator-link" hash-for-method="user_is_navigated_to_home_page">user_is_navigated_to_home_page</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Testing_Google_Apps -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -113,27 +142,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Testing_Google_Apps" title="automationteststore.ChangePasswordStep" class="method navigator-link" hash-for-method="password_should_be_changed">password_should_be_changed</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Testing_Google_Apps" title="automationteststore.SignUpStep" class="method navigator-link" hash-for-method="user_clicks_sign_up_button_or_continue">user_clicks_sign_up_button_or_continue</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Testing_Google_Apps" title="automationteststore.SignUpStep" class="method navigator-link" hash-for-method="user_enters_all_feilds">user_enters_all_feilds</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Testing_Google_Apps" title="automationteststore.ChangePasswordStep" class="method navigator-link" hash-for-method="user_input_current_password_new_password_press_continue">user_input_current_password_new_password_press_continue</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Testing_Google_Apps" title="automationteststore.SignUpStep" class="method navigator-link" hash-for-method="user_is_navigated_to_home_page">user_is_navigated_to_home_page</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -153,6 +162,114 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Testing_Google_Apps" class="panel Testing_Google_Apps">
+          <div class="suite-Testing_Google_Apps-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">automationteststore.ChangePasswordStep</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="password_should_be_changed">
+                  </a> <!-- password_should_be_changed -->
+                  <span class="method-name">password_should_be_changed</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;alert alert-success&apos;]&quot;}
+  (Session info: chrome=122.0.6261.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c908d97c8c71de91f02bd3adc9a52ef1, findElement {using=xpath, value=//div[@class=&apos;alert alert-success&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\gts\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55403}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55403/devtoo..., se:cdpVersion: 122.0.6261.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c908d97c8c71de91f02bd3adc9a52ef1
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at automationteststore.ChangePasswordStep.password_should_be_changed(ChangePasswordStep.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="user_input_current_password_new_password_press_continue">
+                  </a> <!-- user_input_current_password_new_password_press_continue -->
+                  <span class="method-name">user_input_current_password_new_password_press_continue</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#PasswordFrm_current_password&quot;}
+  (Session info: chrome=122.0.6261.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c908d97c8c71de91f02bd3adc9a52ef1, findElement {using=id, value=PasswordFrm_current_password}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\gts\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55403}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55403/devtoo..., se:cdpVersion: 122.0.6261.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c908d97c8c71de91f02bd3adc9a52ef1
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at automationteststore.ChangePasswordStep.user_input_current_password_new_password_press_continue(ChangePasswordStep.java:27)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Testing_Google_Apps-class-failed -->
+          <div class="suite-Testing_Google_Apps-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">automationteststore.SignUpStep</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="user_enters_all_feilds">
+                  </a> <!-- user_enters_all_feilds -->
+                  <span class="method-name">user_enters_all_feilds</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 2
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:303)
+	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:179)
+	at automationteststore.SignUpStep.user_enters_all_feilds(SignUpStep.java:115)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="user_is_navigated_to_home_page">
+                  </a> <!-- user_is_navigated_to_home_page -->
+                  <span class="method-name">user_is_navigated_to_home_page</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [YOUR ACCOUNT HAS BEEN CREATED!] but found [CREATE ACCOUNT]
+	at automationteststore.SignUpStep.user_is_navigated_to_home_page(SignUpStep.java:141)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Testing_Google_Apps-class-failed -->
           <div class="suite-Testing_Google_Apps-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -164,20 +281,6 @@
                   <a name="navigate_to_change_password_page">
                   </a> <!-- navigate_to_change_password_page -->
                   <span class="method-name">navigate_to_change_password_page</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="password_should_be_changed">
-                  </a> <!-- password_should_be_changed -->
-                  <span class="method-name">password_should_be_changed</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="user_input_current_password_new_password_press_continue">
-                  </a> <!-- user_input_current_password_new_password_press_continue -->
-                  <span class="method-name">user_input_current_password_new_password_press_continue</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -200,20 +303,6 @@
                   <a name="user_clicks_sign_up_button_or_continue">
                   </a> <!-- user_clicks_sign_up_button_or_continue -->
                   <span class="method-name">user_clicks_sign_up_button_or_continue</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="user_enters_all_feilds">
-                  </a> <!-- user_enters_all_feilds -->
-                  <span class="method-name">user_enters_all_feilds</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="user_is_navigated_to_home_page">
-                  </a> <!-- user_is_navigated_to_home_page -->
-                  <span class="method-name">user_is_navigated_to_home_page</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -280,42 +369,42 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'user_enters_all_feilds')
-data.setCell(0, 2, 'automationteststore.SignUpStep')
-data.setCell(0, 3, 6347);
+data.setCell(0, 1, 'user_input_current_password_new_password_press_continue')
+data.setCell(0, 2, 'automationteststore.ChangePasswordStep')
+data.setCell(0, 3, 5045);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'user_input_current_password_new_password_press_continue')
-data.setCell(1, 2, 'automationteststore.ChangePasswordStep')
-data.setCell(1, 3, 2816);
+data.setCell(1, 1, 'user_enters_all_feilds')
+data.setCell(1, 2, 'automationteststore.SignUpStep')
+data.setCell(1, 3, 4340);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'browser_is_open')
-data.setCell(2, 2, 'automationteststore.SignUpStep')
-data.setCell(2, 3, 1684);
+data.setCell(2, 1, 'password_should_be_changed')
+data.setCell(2, 2, 'automationteststore.ChangePasswordStep')
+data.setCell(2, 3, 3018);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'user_is_on_sign_up_page')
+data.setCell(3, 1, 'browser_is_open')
 data.setCell(3, 2, 'automationteststore.SignUpStep')
-data.setCell(3, 3, 1087);
+data.setCell(3, 3, 1363);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'user_clicks_sign_up_button_or_continue')
+data.setCell(4, 1, 'user_is_on_sign_up_page')
 data.setCell(4, 2, 'automationteststore.SignUpStep')
-data.setCell(4, 3, 757);
+data.setCell(4, 3, 839);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'navigate_to_change_password_page')
-data.setCell(5, 2, 'automationteststore.ChangePasswordStep')
-data.setCell(5, 3, 314);
+data.setCell(5, 1, 'user_clicks_sign_up_button_or_continue')
+data.setCell(5, 2, 'automationteststore.SignUpStep')
+data.setCell(5, 3, 392);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'password_should_be_changed')
+data.setCell(6, 1, 'navigate_to_change_password_page')
 data.setCell(6, 2, 'automationteststore.ChangePasswordStep')
-data.setCell(6, 3, 267);
+data.setCell(6, 3, 340);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'user_is_navigated_to_home_page')
 data.setCell(7, 2, 'automationteststore.SignUpStep')
-data.setCell(7, 3, 60);
+data.setCell(7, 3, 48);
 window.suiteTableData['Testing_Google_Apps']= { tableData: data, tableDiv: 'times-div-Testing_Google_Apps'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Testing_Google_Apps">
               </div> <!-- times-div-Testing_Google_Apps -->
             </div> <!-- times-div -->
@@ -348,34 +437,42 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">user_is_on_sign_up_page</span>
-                <span class="method-start">1697 ms</span>
+                <span class="method-start">1372 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">user_enters_all_feilds</span>
-                <span class="method-start">2790 ms</span>
+                <span class="method-start">2212 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">user_clicks_sign_up_button_or_continue</span>
-                <span class="method-start">9139 ms</span>
+                <span class="method-start">6559 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">user_is_navigated_to_home_page</span>
-                <span class="method-start">9897 ms</span>
+                <span class="method-start">6953 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">automationteststore.ChangePasswordStep</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">navigate_to_change_password_page</span>
-                <span class="method-start">9959 ms</span>
+                <span class="method-start">7003 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">user_input_current_password_new_password_press_continue</span>
-                <span class="method-start">10274 ms</span>
+                <span class="method-start">7345 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">password_should_be_changed</span>
-                <span class="method-start">13092 ms</span>
+                <span class="method-start">12392 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

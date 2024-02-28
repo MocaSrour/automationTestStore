@@ -26,7 +26,7 @@ public class TestCases extends Parameters {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 	}
 
-	@Test(priority = 1, enabled = false)
+	@Test(priority = 1, enabled = true)
 	public void SignUp() throws InterruptedException {
 		WebElement signUpBtn = driver.findElement(By.id("customer_menu_top")).findElement(By.tagName("li"));
 		signUpBtn.click();
@@ -130,14 +130,14 @@ public class TestCases extends Parameters {
 		}
 	}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2, enabled = true)
 	public void Logout() throws InterruptedException {
 		String logOutURL = "https://automationteststore.com/index.php?rt=account/logout";
 		driver.get(logOutURL);
 		assertEquals(driver.getCurrentUrl(), logOutURL);
 	}
 
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = true)
 	public void Login() throws InterruptedException {
 		driver.get("https://automationteststore.com/index.php?rt=account/login");
 
@@ -153,7 +153,7 @@ public class TestCases extends Parameters {
 		assertEquals(driver.getCurrentUrl(), urlSignedIn);
 	}
 
-	@Test(priority = 4, enabled = false)
+	@Test(priority = 4, enabled = true)
 	public void AddOneSkipOneConditioner() throws InterruptedException {
 		driver.get("https://automationteststore.com/index.php?rt=product/category&path=52_54");
 		List<WebElement> conditionerList = driver.findElement(By.cssSelector(".thumbnails.grid.row.list-inline"))
@@ -174,7 +174,7 @@ public class TestCases extends Parameters {
 		assertEquals(itemsNumCart, (conditionerList.size() + 1) / 2);
 	}
 
-	@Test(priority = 5, enabled = false)
+	@Test(priority = 5, enabled = true)
 	public void SumAllPrices() throws InterruptedException {
 		driver.get("https://automationteststore.com/index.php?rt=product/category&path=52_54");
 
@@ -196,7 +196,7 @@ public class TestCases extends Parameters {
 		assertEquals(sumPrice, expectedPrice);
 	}
 
-	@Test(priority = 6, enabled = false)
+	@Test(priority = 6, enabled = true)
 	public void Checkout() throws InterruptedException {
 		driver.findElement(By.tagName("header")).findElement(By.className("menu_checkout")).click();
 		driver.findElement(By.id("checkout_btn")).click();
@@ -214,7 +214,7 @@ public class TestCases extends Parameters {
 		assertEquals(actualNumber, expectedNumber);
 	}
 
-	@Test(priority = 8, enabled = false)
+	@Test(priority = 8, enabled = true)
 	public void SiteMapInUpperCase() {
 		WebElement siteMapBtn = driver.findElement(By.tagName("footer")).findElement(By.className("info"))
 				.findElement(By.className("info_links_footer"))
@@ -233,7 +233,7 @@ public class TestCases extends Parameters {
 		}
 	}
 
-	@Test(priority = 9, enabled = false)
+	@Test(priority = 9, enabled = true)
 	public void SumPriceOfSectionsHomePage() {
 		List<WebElement> sections = driver.findElements(By.cssSelector(".row.mt20"));
 
@@ -241,7 +241,7 @@ public class TestCases extends Parameters {
 
 			List<WebElement> sectionList = sections.get(y).findElements(By.xpath(
 					".//div[@class='pricetag jumbotron' and not(span)]//div[@class='oneprice' or @class='pricenew']"));
-			System.out.println();
+			
 			double sumPrice = 0;
 			for (int i = 0; i < sectionList.size(); i++) {
 
@@ -253,14 +253,16 @@ public class TestCases extends Parameters {
 		}
 	}
 
-	@Test(priority = 10, enabled = false)
+	@Test(priority = 10, enabled = true)
 	public void PaymentMethodsInFooter() {
+		driver.get("https://automationteststore.com/");
 		WebElement imageInFooter = driver.findElement(By.id("footer")).findElement(By.xpath("//img[@alt='payments']"));
 		assertEquals(imageInFooter.isDisplayed(), true);
 	}
 
 	@Test(priority = 11, enabled = true)
 	public void NavigateToLinkedInAndBackToWebsite() {
+		driver.get("https://automationteststore.com/");
 		driver.get("https://www.linkedin.com/in/mukarram-srour-7b8953b3/");
 		driver.navigate().back();
 		String expectedURL = "https://automationteststore.com/";
@@ -269,7 +271,7 @@ public class TestCases extends Parameters {
 
 	@AfterTest
 	public void Post() throws InterruptedException {
-	//	Thread.sleep(20000);
-	//	driver.close();
+		Thread.sleep(20000);
+		driver.close();
 	}
 }

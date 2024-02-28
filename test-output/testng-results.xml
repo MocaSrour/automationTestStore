@@ -1,47 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-21T19:13:35 EET" name="Testing Google Apps" finished-at="2024-02-21T19:13:48 EET" duration-ms="12826">
+  <suite started-at="2024-02-28T11:43:36 EET" name="Default suite" finished-at="2024-02-28T11:44:18 EET" duration-ms="42446">
     <groups>
     </groups>
-    <test started-at="2024-02-21T19:13:35 EET" name="Regression" finished-at="2024-02-21T19:13:48 EET" duration-ms="12826">
-      <class name="automationteststore.SignUpStep">
-        <test-method signature="browser_is_open()[pri:1, instance:automationteststore.SignUpStep@6731787b]" started-at="2024-02-21T19:13:35 EET" name="browser_is_open" finished-at="2024-02-21T19:13:37 EET" duration-ms="1636" status="PASS">
+    <test started-at="2024-02-28T11:43:36 EET" name="Default test" finished-at="2024-02-28T11:44:18 EET" duration-ms="42446">
+      <class name="automationteststore.TestCases">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:automationteststore.TestCases@6e4de19b]" started-at="2024-02-28T11:43:36 EET" name="Setup" finished-at="2024-02-28T11:43:37 EET" duration-ms="1459" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browser_is_open -->
-        <test-method signature="user_is_on_sign_up_page()[pri:2, instance:automationteststore.SignUpStep@6731787b]" started-at="2024-02-21T19:13:37 EET" name="user_is_on_sign_up_page" finished-at="2024-02-21T19:13:38 EET" duration-ms="945" status="PASS">
+        </test-method> <!-- Setup -->
+        <test-method signature="SignUp()[pri:1, instance:automationteststore.TestCases@6e4de19b]" started-at="2024-02-28T11:43:37 EET" name="SignUp" finished-at="2024-02-28T11:43:44 EET" duration-ms="6291" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- user_is_on_sign_up_page -->
-        <test-method signature="user_enters_all_feilds()[pri:3, instance:automationteststore.SignUpStep@6731787b]" started-at="2024-02-21T19:13:38 EET" name="user_enters_all_feilds" finished-at="2024-02-21T19:13:43 EET" duration-ms="5636" status="PASS">
+        </test-method> <!-- SignUp -->
+        <test-method signature="Logout()[pri:2, instance:automationteststore.TestCases@6e4de19b]" started-at="2024-02-28T11:43:44 EET" name="Logout" finished-at="2024-02-28T11:43:44 EET" duration-ms="377" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- user_enters_all_feilds -->
-        <test-method signature="user_clicks_sign_up_button_or_continue()[pri:4, instance:automationteststore.SignUpStep@6731787b]" started-at="2024-02-21T19:13:43 EET" name="user_clicks_sign_up_button_or_continue" finished-at="2024-02-21T19:13:44 EET" duration-ms="774" status="PASS">
+        </test-method> <!-- Logout -->
+        <test-method signature="Login()[pri:3, instance:automationteststore.TestCases@6e4de19b]" started-at="2024-02-28T11:43:44 EET" name="Login" finished-at="2024-02-28T11:43:45 EET" duration-ms="960" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- user_clicks_sign_up_button_or_continue -->
-        <test-method signature="user_is_navigated_to_home_page()[pri:5, instance:automationteststore.SignUpStep@6731787b]" started-at="2024-02-21T19:13:44 EET" name="user_is_navigated_to_home_page" finished-at="2024-02-21T19:13:44 EET" duration-ms="77" status="PASS">
+        </test-method> <!-- Login -->
+        <test-method signature="AddOneSkipOneConditioner()[pri:4, instance:automationteststore.TestCases@6e4de19b]" started-at="2024-02-28T11:43:45 EET" name="AddOneSkipOneConditioner" finished-at="2024-02-28T11:43:48 EET" duration-ms="2566" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- user_is_navigated_to_home_page -->
-      </class> <!-- automationteststore.SignUpStep -->
-      <class name="automationteststore.ChangePasswordStep">
-        <test-method signature="navigate_to_change_password_page()[pri:6, instance:automationteststore.ChangePasswordStep@2c104774]" started-at="2024-02-21T19:13:44 EET" name="navigate_to_change_password_page" finished-at="2024-02-21T19:13:44 EET" duration-ms="377" status="PASS">
+        </test-method> <!-- AddOneSkipOneConditioner -->
+        <test-method signature="SumAllPrices()[pri:5, instance:automationteststore.TestCases@6e4de19b]" started-at="2024-02-28T11:43:48 EET" name="SumAllPrices" finished-at="2024-02-28T11:43:48 EET" duration-ms="417" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigate_to_change_password_page -->
-        <test-method signature="user_input_current_password_new_password_press_continue()[pri:7, instance:automationteststore.ChangePasswordStep@2c104774]" started-at="2024-02-21T19:13:44 EET" name="user_input_current_password_new_password_press_continue" finished-at="2024-02-21T19:13:48 EET" duration-ms="3185" status="PASS">
+        </test-method> <!-- SumAllPrices -->
+        <test-method signature="Checkout()[pri:6, instance:automationteststore.TestCases@6e4de19b]" started-at="2024-02-28T11:43:48 EET" name="Checkout" finished-at="2024-02-28T11:43:51 EET" duration-ms="2794" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- user_input_current_password_new_password_press_continue -->
-        <test-method signature="password_should_be_changed()[pri:8, instance:automationteststore.ChangePasswordStep@2c104774]" started-at="2024-02-21T19:13:48 EET" name="password_should_be_changed" finished-at="2024-02-21T19:13:48 EET" duration-ms="99" status="PASS">
+        </test-method> <!-- Checkout -->
+        <test-method signature="CheckContactNum()[pri:7, instance:automationteststore.TestCases@6e4de19b]" started-at="2024-02-28T11:43:51 EET" name="CheckContactNum" finished-at="2024-02-28T11:43:51 EET" duration-ms="59" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- password_should_be_changed -->
-      </class> <!-- automationteststore.ChangePasswordStep -->
-    </test> <!-- Regression -->
-  </suite> <!-- Testing Google Apps -->
+        </test-method> <!-- CheckContactNum -->
+        <test-method signature="SiteMapInUpperCase()[pri:8, instance:automationteststore.TestCases@6e4de19b]" started-at="2024-02-28T11:43:51 EET" name="SiteMapInUpperCase" finished-at="2024-02-28T11:43:52 EET" duration-ms="1345" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SiteMapInUpperCase -->
+        <test-method signature="SumPriceOfSectionsHomePage()[pri:9, instance:automationteststore.TestCases@6e4de19b]" started-at="2024-02-28T11:43:52 EET" name="SumPriceOfSectionsHomePage" finished-at="2024-02-28T11:43:55 EET" duration-ms="3011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SumPriceOfSectionsHomePage -->
+        <test-method signature="PaymentMethodsInFooter()[pri:10, instance:automationteststore.TestCases@6e4de19b]" started-at="2024-02-28T11:43:55 EET" name="PaymentMethodsInFooter" finished-at="2024-02-28T11:43:56 EET" duration-ms="564" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PaymentMethodsInFooter -->
+        <test-method signature="NavigateToLinkedInAndBackToWebsite()[pri:11, instance:automationteststore.TestCases@6e4de19b]" started-at="2024-02-28T11:43:56 EET" name="NavigateToLinkedInAndBackToWebsite" finished-at="2024-02-28T11:43:58 EET" duration-ms="2440" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToLinkedInAndBackToWebsite -->
+        <test-method is-config="true" signature="Post()[pri:0, instance:automationteststore.TestCases@6e4de19b]" started-at="2024-02-28T11:43:58 EET" name="Post" finished-at="2024-02-28T11:44:18 EET" duration-ms="20072" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Post -->
+      </class> <!-- automationteststore.TestCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

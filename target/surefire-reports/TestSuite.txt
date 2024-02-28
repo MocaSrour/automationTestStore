@@ -1,4 +1,43 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.047 s - in TestSuite
+Tests run: 8, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 17.932 s <<< FAILURE! - in TestSuite
+automationteststore.SignUpStep.user_enters_all_feilds  Time elapsed: 4.347 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Cannot locate option with index: 2
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: driver.version: unknown
+	at automationteststore.SignUpStep.user_enters_all_feilds(SignUpStep.java:115)
+
+automationteststore.SignUpStep.user_is_navigated_to_home_page  Time elapsed: 0.048 s  <<< FAILURE!
+java.lang.AssertionError: expected [YOUR ACCOUNT HAS BEEN CREATED!] but found [CREATE ACCOUNT]
+	at automationteststore.SignUpStep.user_is_navigated_to_home_page(SignUpStep.java:141)
+
+automationteststore.ChangePasswordStep.user_input_current_password_new_password_press_continue  Time elapsed: 5.049 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#PasswordFrm_current_password"}
+  (Session info: chrome=122.0.6261.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c908d97c8c71de91f02bd3adc9a52ef1, findElement {using=id, value=PasswordFrm_current_password}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\gts\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55403}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55403/devtoo..., se:cdpVersion: 122.0.6261.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c908d97c8c71de91f02bd3adc9a52ef1
+	at automationteststore.ChangePasswordStep.user_input_current_password_new_password_press_continue(ChangePasswordStep.java:27)
+
+automationteststore.ChangePasswordStep.password_should_be_changed  Time elapsed: 3.018 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='alert alert-success']"}
+  (Session info: chrome=122.0.6261.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c908d97c8c71de91f02bd3adc9a52ef1, findElement {using=xpath, value=//div[@class='alert alert-success']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\gts\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55403}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55403/devtoo..., se:cdpVersion: 122.0.6261.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c908d97c8c71de91f02bd3adc9a52ef1
+	at automationteststore.ChangePasswordStep.password_should_be_changed(ChangePasswordStep.java:36)
+
